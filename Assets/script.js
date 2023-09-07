@@ -11,13 +11,19 @@ $(function () {
   var calInput = $('#textarea');
 
   saveBtnEl.on('click', function() {
-    if (hourNine.value === '') {
-      console.log('Nothing here');
+
+    let input = calInput.val();
+
+    if (input !== '') {
+      console.log('Something here');
+      localStorage.setItem('hourNineItems', JSON.stringify(input));
     }
     else {
-      console.log('Something here');
+      console.log('Nothing here');
     }
   })
+
+  var hourNine = JSON.parse(localStorage.getItem('hourNineItems'));
 
 
 
