@@ -33,7 +33,7 @@ $(function () {
 
     const $timeBlockText = localStorage.getItem($thisTimeBlock.attr('id'));
 
-    textarea.value = $timeBlockText;
+    $thisTimeBlock.children("textarea").text($timeBlockText);
 
 
     //assign that getItem value to a variable, set it as a value of the text area of the time box
